@@ -35,6 +35,9 @@
       <img id="img" src="assets/faces.jpg" />
     </div>
   </div>
+  <div id="Beard">
+	<img id="Beardimg" src = "assets/faces.jpg"/>
+  </div>
 
   <script>
     window.onload = function() {
@@ -61,11 +64,17 @@
         rect.style.top = (img.offsetTop + y) + 'px';
 
         /*
-        OI TOBY HERE YOU SHOULD DRAW THE IMAGE USING X POSITION: img.offsetLeft + x          and Y position the same but for y and WIDTH being w and HEIGHT being h you cunt, image url
+        OI TOBY HERE YOU SHOULD DRAW THE IMAGE USING X POSITION: img.offsetLeft + x  and Y position the same but for y and WIDTH being w and HEIGHT being h
         */
+		var b = document.getElementById('Beard');
+		b.style.position = "absolute";
+		b.style.left = img.offsetLeft + x +'px';
+		b.style.top = img.offsetTop + y +'px';	
 		
-		//booooobies
-      };
+		var bi = document.getElementById('Beardimg');
+		bi.style.width = w + 'px';
+        bi.style.height = h + 'px';
+		};
     };
   </script>
 
