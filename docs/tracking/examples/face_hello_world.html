@@ -27,16 +27,11 @@
   </style>
 </head>
 <body>
-  <div class="demo-title">
-    <p><a href="http://trackingjs.com" target="_parent">tracking.js</a> － detect faces, eyes and mouths in a image</p>
-  </div>
-  <div class="demo-frame">
     <div class="demo-container">
       <img id="img" src="assets/faces.jpg" />
     </div>
-  </div>
   <div id="Beard">
-	<img id="Beardimg" src = "assets/faces.jpg"/>
+    <img id="Beardimg" src = "http://moziru.com/images/beard-clipart-11.png"/>
   </div>
 
   <script>
@@ -70,15 +65,10 @@
 		    b.style.position = "absolute";
 		    b.style.left = (img.offsetLeft + x) +'px';
 		    b.style.top = (img.offsetTop + y) +'px';
-        bi.style.width = w + 'px';
-        bi.style.height = h + 'px';
 
 		    var bi = document.getElementById('Beardimg');
 		    bi.style.width = w + 'px';
         bi.style.height = h + 'px';
-
-		    bi.style.left = (img.offsetLeft + x) +'px';
-		    bi.style.top = (img.offsetTop + y) +'px';
 		};
     };
   </script>
