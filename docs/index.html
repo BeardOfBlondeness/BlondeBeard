@@ -1,8 +1,35 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <!-- Importing Web Component's Polyfill -->
+  <script src="bower/platform/platform.js"></script>
+  <!-- Importing Custom Elements -->
+  <link rel="import" href="../src/image-object-tracking.html">
+</head>
 <body>
-<br> hello world
-  <div>
-    <p>I want you to eat an anus you donkey</p>
-  </div>
+  <!-- Using Custom Elements -->
+  <img is="image-object-tracking" target="face" src="assets/faces.png" />
+  <script>
+    var img = document.querySelector('img');
+
+    // Fires when faces are found on the image.
+    img.addEventListener('track', function(event) {
+      event.detail.data.forEach(function(rect) {
+        plotRectangle(img, rect);
+      });
+    });
+
+    function plotRectangle(el, rect) {
+      var div = document.createElement('div');
+      div.style.position = 'absolute';
+      div.style.border = '2px solid ' + (rect.color || 'magenta');
+      div.style.width = rect.width + 'px';
+      div.style.height = rect.height + 'px';
+      div.style.left = el.offsetLeft + rect.x + 'px';
+      div.style.top = el.offsetTop + rect.y + 'px';
+      document.body.appendChild(div);
+      return div;
+    }
+  </script>
 </body>
 </html>
