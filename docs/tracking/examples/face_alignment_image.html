@@ -9,7 +9,7 @@
   <script src="../build/data/face-min.js"></script>
   <script src="../src/alignment/training/Landmarks.js"></script>
   <script src="../src/alignment/training/Regressor.js"></script>
-  
+
   <script src="../node_modules/dat.gui/build/dat.gui.min.js"></script>
   <script src="assets/stats.min.js"></script>
 
@@ -68,6 +68,7 @@
           for(var i=0; i < landmarks.length; i++){
             window.plotLandmark(landmarks[i][0], landmarks[i][1], 2, '#44ABDA');
           }
+          window.plotLandmark(landmarks[4][0], landmarks[4][1], 2, '#43ABDD');
         });
 
       });
