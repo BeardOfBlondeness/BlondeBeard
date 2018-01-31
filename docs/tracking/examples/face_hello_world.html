@@ -66,11 +66,8 @@
         canvas.height = 1000;
 
         // Get the drawing context
-        var ctx = canvas.getContext('2d');
-        var new_image_url = canvas.toDataURL();
-        var imge = document.createElement('img');
-        imge.src = "http://www.freepngimg.com/thumb/beard/7-beard-and-moustache-png-image-thumb.png";
-        ctx.drawImage(imge, x, y, w, h);
+        var lines = '<img src="http://www.freepngimg.com/thumb/beard/7-beard-and-moustache-png-image-thumb.png" width=40 height = 500';
+        document.write(lines);
       };
     };
   </script>
