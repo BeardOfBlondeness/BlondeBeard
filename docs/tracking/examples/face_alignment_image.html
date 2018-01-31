@@ -66,11 +66,12 @@
 
         event.data.landmarks.forEach(function(landmarks) {
           for(var i=0; i < landmarks.length; i++){
-            window.plotLandmark(landmarks[i][0], landmarks[i][1], 2, '#44ABDA');
+            if(i == 0 || i == 1 || i == 3 || i == 4) {
+              window.plotLandmark(landmarks[i][0], landmarks[i][1], 2, '#ff0048');
+            } else {
+              window.plotLandmark(landmarks[i][0], landmarks[i][1], 2, '#44ABDA');
+            }
           }
-          window.plotLandmark(landmarks[4][0], landmarks[4][1], 2, '#89314a');
-          window.plotLandmark(landmarks[3][0], landmarks[4][1], 2, '#89314a');
-          window.plotLandmark(landmarks[1][0], landmarks[4][1], 2, '#89314a');
         });
 
       });
