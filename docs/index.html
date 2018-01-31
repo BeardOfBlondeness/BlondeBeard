@@ -2,13 +2,11 @@
 <html>
 <head>
   <!-- Importing Web Component's Polyfill -->
-  <script src="bower/platform/platform.js"></script>
-  <!-- Importing Custom Elements -->
-  <link rel="import" href="../src/image-object-tracking.html">
+  <script src="tracking/bower/platform/platform.js"></script>
 </head>
 <body>
   <!-- Using Custom Elements -->
-  <img is="image-object-tracking" target="face" src="assets/faces.png" />
+  <img is="image-object-tracking" target="face" src="tracking/assets/faces.png" />
   <script>
     var img = document.querySelector('img');
 
