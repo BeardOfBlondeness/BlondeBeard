@@ -70,10 +70,15 @@
 		    b.style.position = "absolute";
 		    b.style.left = (img.offsetLeft + x) +'px';
 		    b.style.top = (img.offsetTop + y) +'px';
+        bi.style.width = w + 'px';
+        bi.style.height = h + 'px';
 
 		    var bi = document.getElementById('Beardimg');
 		    bi.style.width = w + 'px';
         bi.style.height = h + 'px';
+
+		    bi.style.left = (img.offsetLeft + x) +'px';
+		    bi.style.top = (img.offsetTop + y) +'px';
 		};
     };
   </script>
