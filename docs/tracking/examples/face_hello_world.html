@@ -30,7 +30,6 @@
   <div class="demo-title">
     <p><a href="http://trackingjs.com" target="_parent">tracking.js</a> － detect faces, eyes and mouths in a image</p>
   </div>
-  <canvas width="1000" height="1000" id="canvas"/>
   <div class="demo-frame">
     <div class="demo-container">
       <img id="img" src="assets/faces.jpg" />
@@ -63,8 +62,7 @@
         rect.style.left = (img.offsetLeft + x) + 'px';
         rect.style.top = (img.offsetTop + y) + 'px';
 
-        var c = document.getElementById("canvas");
-        var ctx = c.getContext("2d");
+        var ctx = rect.getContext("2d");
         var imge = document.getElementById("scream");
         ctx.drawImage(imge, img.offsetLeft + x, image.offsetTop + y, w, h);
       };
