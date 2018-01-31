@@ -34,6 +34,8 @@
   <div class="demo-frame">
     <div class="demo-container">
       <img id="img" src="assets/faces.jpg" />
+      <img id="scream" width="0" height="0" src="http://www.freepngimg.com/thumb/beard/7-beard-and-moustache-png-image-thumb.png" alt="The Scream">
+      <canvas width="1000" height="1000" id="canvas"/>
     </div>
   </div>
 
@@ -60,6 +62,11 @@
         rect.style.height = h + 'px';
         rect.style.left = (img.offsetLeft + x) + 'px';
         rect.style.top = (img.offsetTop + y) + 'px';
+
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        var imge = document.getElementById("scream");
+        ctx.drawImage(imge, img.offsetLeft + x, image.offsetTop + y, w, h);
       };
     };
   </script>
