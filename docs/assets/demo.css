@@ -51,6 +51,23 @@
   border-bottom-left-radius: 10px;
 }
 
+.options {
+  left: 30%;
+  top:10px;
+  width: 40%;
+  height: 200px;
+  position: relative;
+  background: #878787;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.form {
+  left: 20%;
+  top:10px;
+  width: 100%;
+  position: relative;
+}
 .dg.ac {
   z-index: 100 !important;
   top: 50px !important;

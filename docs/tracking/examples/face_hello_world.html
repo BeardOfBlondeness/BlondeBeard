@@ -2,13 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>BlondeBeard</title>
+  <title>tracking.js - face hello world</title>
   <link rel="stylesheet" href="assets/demo.css">
 
-  <script src="tracking/build/tracking-min.js"></script>
-  <script src="tracking/build/data/face-min.js"></script>
-  <script src="tracking/build/data/eye-min.js"></script>
-  <script src="tracking/build/data/mouth-min.js"></script>
+  <script src="../build/tracking-min.js"></script>
+  <script src="../build/data/face-min.js"></script>
+  <script src="../build/data/eye-min.js"></script>
+  <script src="../build/data/mouth-min.js"></script>
 
   <style>
   .rect {
@@ -28,24 +28,19 @@
 </head>
 <body>
   <div class="options">
-    <div class="form">
-    <form>
-      Custom Image URL: <input type="text" name="fname" id="url">
-      <button type="button" onclick="newImage()">Custom Image</button>
-    </form>
-  </div>
+    
   </div>
     <div class="demo-container">
-      <img id="img" src="https://vignette.wikia.nocookie.net/puploverzklan/images/3/35/Face_will_smith.png" />
+      <img id="img" src="https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/zinnia/2017/08/22/morgan-freeman-sag-lifetime-achievementjpg644x2043_q100.jpg.644x439_q100.jpg"/>
     </div>
   <div id="Beard">
-    <img id="Beardimg" src = "assets/blondebeard.png"/>
+    <img id="Beardimg" src = "http://moziru.com/images/beard-clipart-11.png"/>
   </div>
 
   <script>
-
     window.onload = function() {
       var img = document.getElementById('img');
+
       var tracker = new tracking.ObjectTracker(['mouth']);
       tracker.setStepSize(1.7);
 
@@ -58,42 +53,26 @@
       });
 
       window.plot = function(x, y, w, h) {
-        /*var rect = document.createElement('div');
+        var rect = document.createElement('div');
         document.querySelector('.demo-container').appendChild(rect);
         rect.classList.add('rect');
         rect.style.width = w + 'px';
         rect.style.height = h + 'px';
         rect.style.left = (img.offsetLeft + x) + 'px';
-        rect.style.top = (img.offsetTop + y) + 'px';*/
-
+        rect.style.top = (img.offsetTop + y) + 'px';
         /*
         OI TOBY HERE YOU SHOULD DRAW THE IMAGE USING X POSITION: img.offsetLeft + x  and Y position the same but for y and WIDTH being w and HEIGHT being h
         */
 		    var b = document.getElementById('Beard');
 		    b.style.position = "absolute";
-		    b.style.left = ((img.offsetLeft + x)-(w/2)) +'px';
-		    b.style.top = ((img.offsetTop + y + 200)-(w/2)) +'px';
+        b.style.left = ((img.offsetLeft + x)-(w/2)) +'px';
+		    b.style.top = ((img.offsetTop + y)-(w/2)) +'px';
 
 		    var bi = document.getElementById('Beardimg');
 		    bi.style.width = (w * 2) + 'px';
         bi.style.height = (h * 3) + 'px';
 		};
     };
-    function newImage() {
-      var url = document.getElementById('url');
-      if(url.value=="") {
-        alert("Please input a valid url!");
-        return;
-      }
-      var img = document.getElementById('img');
-      img.src=url.value;
-      window.onload();
-    }
-
-    function sleepFor( sleepDuration ){
-    var now = new Date().getTime();
-    while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
-}
   </script>
 
 </body>
