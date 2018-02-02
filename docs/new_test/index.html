@@ -64,9 +64,9 @@
 			 			ba.style.top = positions[1][1] +'px';
 
 						if(positions[13][1] > positions[1][1]) {
-							ba.style.webkitTransform = 'rotate('+(-1*angle)+'rad)';
+							ba.style.webkitTransform = 'rotate('+(-1*rotationAngle)-90+'deg)';
 						} else {
-							ba.style.webkitTransform = 'rotate('+angle+'rad)';
+							ba.style.webkitTransform = 'rotate('+rotationAngle-90+'deg)';
 						}
 
 						var bi = document.getElementById('Beardimg');
