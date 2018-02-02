@@ -58,12 +58,15 @@
 						var angle = Math.acos(cosine);
 						var rotationAngle = (angle*180)/Math.PI;
 						positionString += A[0] + 'wow<br/>';
+
+						var offsetChange = positions[47][0]-(((positions[13][0] - positions[1][0])/2)+positions[1][0])
+
 						var ba = document.getElementById('Beard');
 			 			ba.style.position = "absolute";
-			 			ba.style.left = positions[1][0] +'px';
+			 			ba.style.left = positions[1][0]+offsetChange +'px';
 			 			ba.style.top = positions[1][1] +'px';
 
-							ba.style.webkitTransform = 'rotate('+(-1*rotationAngle+90)+'deg)';
+						ba.style.webkitTransform = 'rotate('+(-1*rotationAngle+90)+'deg)';
 
 						var bi = document.getElementById('Beardimg');
 						bi.style.width = ((positions[13][0] - positions[1][0])) + 'px';
