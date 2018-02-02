@@ -45,6 +45,9 @@
 					// print the positions
 					var positionString = "";
 					if (positions) {
+						for (var p = 0;p < 70;p++) {
+							positionString += "featurepoint "+p+" : ["+positions[p][0].toFixed(2)+","+positions[p][1].toFixed(2)+"]<br/>";
+						}
 						
 						var A = [0, positions[1]];
 						var B = [positions[13][0]-positions[1][0], positions[13][1]-positions[1][1]];
@@ -57,7 +60,7 @@
 						
 						var angle = Math.acos(cosine);
 						var rotationAngle = (angle*180)/Math.PI;
-						
+						positionString += rotationAngle + '<br/>';
 						var ba = document.getElementById('Beard');
 			 			ba.style.position = "absolute";
 			 			ba.style.left = positions[1][0] +'px';
