@@ -68,8 +68,9 @@
 
 						ba.style.webkitTransform = 'rotate('+(-1*rotationAngle+90)+'deg)';
 
+						var offsetMag = Math.sqrt(offsetChange*offsetChange);
 						var bi = document.getElementById('Beardimg');
-						bi.style.width = ((positions[13][0] - positions[1][0]))-offsetChange + 'px';
+						bi.style.width = ((positions[13][0] - positions[1][0]))-offsetMag + 'px';
 						bi.style.height = (positions[12][1] - positions[7][1]) + 'px';
 						document.getElementById('positions').innerHTML = positionString;
 					}
